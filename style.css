@@ -495,7 +495,7 @@ section .title::after{
 /*  sessão footer  */
 footer{
 	height: 300px;
-	background-color: #373636;
+	background-color: #222222;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -503,7 +503,7 @@ footer{
 	position: relative;
 }
 footer p{
-	font-family: calibri;
+	font-family: 'Ubuntu', sans-serif;
 }
 footer p:nth-child(1){
 	font-size: 30px;
