@@ -17,13 +17,13 @@ $(document).ready(function () {
 
     var typed = new Typed(".typing", {
         strings: ["Analista", "Desenvolvedor", "Designer"],
-        typeSpeed: 100,
+        typeSpeed: 200,
         backSpeed: 60,
         loop: true
     });
     var typed = new Typed(".typing-2", {
         strings: ["Analista", "Desenvolvedor", "Designer"],
-        typeSpeed: 100,
+        typeSpeed: 200,
         backSpeed: 60,
         loop: true
     });
