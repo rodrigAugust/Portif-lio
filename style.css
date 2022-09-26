@@ -132,8 +132,7 @@ html{
 .scroll-up-btn.show{
     bottom: 30px;
     opacity: 1;
-    pointer-events:auto;
-    
+    pointer-events:auto;  
 }
 
 /*  todos os codigos similares  */
