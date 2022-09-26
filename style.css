@@ -181,9 +181,7 @@ section .title::after{
     align-items: center;
     justify-content: space-between;
 }
-
 /*  sessão sobre  */
-
 .about .title::after{
     content: "Sobre mim";
 }
@@ -495,7 +493,6 @@ section .title::after{
     color: #FF4B4B;
     background: none;
 }
-
 /*  sessão footer  */
 footer{
 	height: 300px;
