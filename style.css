@@ -495,7 +495,7 @@ section .title::after{
 /*  sessão footer  */
 footer{
 	height: 300px;
-	background-color: #222222;
+	background-color: #111111;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
