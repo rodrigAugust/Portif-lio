@@ -8,12 +8,9 @@
     <title>Rodrigo Augusto</title>
     <link rel="icon" href="image/img-9.jpg">
 
-    <link rel="stylesheet" href="style.css">
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
@@ -180,6 +177,42 @@
         bottom: 30px;
         opacity: 1;
         pointer-events: auto;
+    }
+
+    .scroll-down {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .scroll-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        line-height: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .scroll-btn:hover {
+        background-color: #FF4B4B;
+        transform: scale(1.1);
+    }
+
+    .scroll-btn i {
+        color: #333;
+        font-size: 24px;
+        transition: color 0.3s;
+    }
+
+    .scroll-btn:hover i {
+        color: #fff;
     }
 
     /*  todos os codigos similares  */
@@ -967,6 +1000,10 @@
                 <a href="https://api.whatsapp.com/send?phone=5512997300443" target="_blank">Contate-me</a>
             </div>
         </div>
+
+        <div class="scroll-down">
+            <a href="#about" class="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+        </div>
     </section>
 
     <!--sessão sobre-->
@@ -1375,9 +1412,31 @@
                     $('.scroll-up-btn').removeClass("show");
                 }
             });
+
             $('.scroll-up-btn').click(function () {
                 $('html').animate({ scrollTop: 0 });
             });
+
+            $('.scroll-btn').click(function () {
+                var scroll = $('#about').offset().top;
+                $('html, body').animate({ scrollTop: scroll });
+            });
+
+            // Função para lidar com o clique nos links de navegação
+            $('.navbar a').click(function (event) {
+                // Impede o comportamento padrão do link
+                event.preventDefault();
+
+                // Obtém o ID do elemento de destino com base no href do link clicado
+                var target = $(this).attr('href');
+
+                // Obtém a posição do elemento de destino
+                var scroll = $(target).offset().top;
+
+                // Anima a rolagem até o elemento de destino
+                $('html, body').animate({ scrollTop: scroll });
+            });
+
 
             var typed = new Typed(".typing", {
                 strings: ["Analista", "Desenvolvedor", "Designer"],
